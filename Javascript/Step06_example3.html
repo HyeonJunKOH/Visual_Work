@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step06_example3.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background-color: yellow;
+            cursor: pointer;
+            transition: margin-left 0.4s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">div1</div>
+    <div class="box">div2</div>
+    <div class="box">div3</div>
+    <div class="box">div4</div>
+    <div class="box">div5</div><br>
+    <button onclick="reset()">리셋</button>
+    <script>
+        //global 영역에 선언된 변수 사용 가능
+        
+
+            let divs=document.querySelectorAll(".box");
+            
+            divs.forEach((item,index)=>{
+                //margin-left 값을 저장할 변수를 만들고 초기값 0 부여
+                let mLeft=0;
+                
+                
+                //mLeft=mLeft+100; -> 해당 영역에 들어가면 바깥영역의 하나의 고유 영역만 생긴다
+                //따라서 밑에 이벤트 클릭을 하게 되면 100px 한번씩만 이동 됨
+                //해서 밑에 실제 클릭하는 동작에 넣어줘야 100px 씩 이동 
+                item.addEventListener("click",(e)=>{
+                    //click 이벤트가 발생한 바로 그 요소의 margin-left 값을 변경시키기
+                    mLeft += 100;
+                    e.target.style.marginLeft=mLeft+"px"
+                    e.target.innerText=mLeft+"px" 
+                })
+            });
+
+            let reset=()=>{
+                document.querySelector("").marginLeft="";
+                document.querySelector("").innerText="px";
+            }
+        
+            
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

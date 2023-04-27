@@ -26,10 +26,11 @@
       
             document.querySelector("#printBtn").addEventListener("click",()=>{
                 for(let i=0; i<names.length; i++){
-                    let li=document.createElement("li");
-                    li.innerText=names[i];
-                    document.querySelector("#friendList").append(li)
-                };   
+                    let li = document.createElement("li");
+                    li.innerText = names[i];
+                    document.querySelector("#friendList").append(li);
+
+                };
             });
     </script>
 </body>

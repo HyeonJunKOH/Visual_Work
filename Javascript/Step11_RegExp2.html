@@ -21,7 +21,9 @@
             
             //검증할 정규 표현식 객체를 만들어서
             //const reg=/^[a-zA-Z0-9].{1,}+$/;
-            let reg= /^[\w]+$/;
+            //let reg= /^[\w]+$/;
+            //문자열로 정규표현식을 작성할때 역슬래시 하나당 역슬래시 2개를 작성해야 한다.
+            const reg=new RegExp("^[\\w]+$");
             //매칭 여부를 알아낸다.
             const isPass=reg.test(msg);
             if(isPass){

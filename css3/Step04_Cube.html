@@ -31,7 +31,7 @@
             font-size: 100px;
             font-weight: bold;
             opacity: 0.5;
-        }
+        } 
         .cube > div:nth-child(1){
             transform: translateZ(200px);
         }
@@ -50,9 +50,10 @@
         .cube > div:nth-child(6){
             transform: rotateX(-90deg) translateZ(200px);
         }
+
         .cube:hover{
             transition: transform 1s ease-in-out;
-            transform: rotateX(45deg) rotateY(45deg);
+            transform: translateZ(-200px) rotateX(45deg) rotateY(45deg);
         }
     </style>
 </head>
@@ -69,6 +70,6 @@
                 <div>6</div>    
             </div>
         </div>
-    </div>
+    </div>    
 </body>
 </html>
